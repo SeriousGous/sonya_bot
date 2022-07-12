@@ -682,5 +682,12 @@ async def xo(ctx):  # Tic-Tac-Toe game
                        "best you will ever achieve.")
 
 
+@bot.command()  # throws a random peaky blinders gif
+async def shelby(ctx):
+    gif_number = random.randint(1, 77)
+    full_path = os.path.abspath('main.py')
+    await ctx.send(file=discord.File(f"{full_path[0:38]}\shelby\shelby ({gif_number}).gif"))
+
+
 bot_token = open('C://Users//Max//Desktop//pyth//token.txt', 'r')
 bot.run(bot_token.read())
